@@ -73,7 +73,7 @@ static int create_joystick(void) {
         ioctl(uin, UI_ABS_SETUP, &a);
     }
 
-    struct uinput_setup s = { .id = { BUS_USB, 0x1209, 0x0001, 1 }, .name = "FX100 Driving Pedal" };
+    struct uinput_setup s = { .id = { BUS_USB, 0x1209, 0x0001, 1 }, .name = "FLAMMA Portable Multi Effects Pedal FX100" };
     if (ioctl(uin, UI_DEV_SETUP, &s) < 0 || ioctl(uin, UI_DEV_CREATE) < 0) {
         perror("uinput create");
         return -1;
